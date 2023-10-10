@@ -1,24 +1,21 @@
-# README
+# Rails QR Code
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![rails import-by-csv](https://i.ibb.co/NL419BK/Tab-Post-07.gif)
 
-Things you may want to cover:
+Rails Import by CSV is a simple application to import/export CSV file to a database. 
 
-* Ruby version
+Esta aplicação pretende mostrar como realizar uma importação através de ActiveJobs e Turbo Stream utilizando Ruby on Rails.
 
-* System dependencies
+## Installation
+  - Clone this repository
+  - Install dependencies with `bundle install`
+  - Run the migrations with `rails db:migrate`
+  - Run the server with `./bin/dev`	
+  - Visit http://localhost:3000
+  - Download the data_sets.csv file in the root of the project
+  - Ready to Use
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Feel free to customize this application.
+## Tutorial Step by Step
+Check the tutorial step by step in 
+- [lucasgeron.github.io](https://lucasgeron.github.io/2023/10/10/rails-import-by-csv.html)
