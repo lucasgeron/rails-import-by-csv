@@ -4,7 +4,7 @@
 
 Rails Import by CSV is a simple application to import/export CSV file to a database. 
 
-This application intents to show how to perform a importation trhough  using Ruby on Rails.
+This application intents to show how to perform a importation of CSV File through ActiveJobs and Turbo Stream using Ruby on Rails.
 
 ## Installation
   - Clone this repository
