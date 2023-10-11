@@ -3,6 +3,6 @@
   <%= render "import_form" %>
   <%= link_to 'Back to visitors', visitors_path, class: " rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
 
-  <%= turbo_stream_from 'importVisitors' %>
+  <%= turbo_stream_from 'import_visitors' %>
   <div id="visitors"></div>
 </div>

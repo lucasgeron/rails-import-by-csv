@@ -60,12 +60,12 @@ class VisitorsController < ApplicationController
   # GET /visitors/import
   # POST /visitors/import
   def import 
-    return @result = ImportJob.perform_now(Visitor, params[:file]) if request.post?
+    @service = ImportService.call(Visitor, params[:file]) if request.post?
   end
 
   # POST /visitors/export
   def export
-    send_data ExportJob.perform_now(Visitor, %i[name cpf]), filename: "visitors-#{Date.today}.csv"
+    send_data ExportService.call(Visitor, %i[name cpf]), filename: "visitors-#{Date.today}.csv"
   end
 
   # POST /visitors/delete_all

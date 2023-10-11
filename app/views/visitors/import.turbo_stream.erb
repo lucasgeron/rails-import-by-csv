@@ -1,13 +1,18 @@
 <%= turbo_stream.replace 'import_form' do  %>
-  <% if @result[:imported_sucessfully].positive? %>
-    <div class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 " role="alert">
-      <strong class="block sm:inline">You have imported <%= @result[:imported_sucessfully] %> visitors successfully.</strong>
+
+  <div class="p-4 my-4 text-sm text-blue-800 rounded-lg bg-blue-50 " role="alert">
+    <strong class="block sm:inline"><b><%= @service.file.original_filename %> </b> with <b><%= @service.total %> <%= @service.model %></b> was processed successfully.</strong>
+  </div>
+
+  <% if @service.imported_successfully.positive? %>
+    <div class="p-4 my-4 text-sm text-green-800 rounded-lg bg-green-50 " role="alert">
+      <strong class="block sm:inline">You have imported <%= @service.imported_successfully %> visitors successfully.</strong>
     </div>
   <% end %>
 
-  <% if @result[:imported_unsucessfully].positive? %>
-    <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
-      <strong class="block sm:inline"><%= @result[:imported_unsucessfully] %> visitors could not be imported.</strong>
+  <% if @service.imported_unsuccessfully.positive? %>
+    <div class="p-4 my-4 text-sm text-red-800 rounded-lg bg-red-50 " role="alert">
+      <strong class="block sm:inline"><%= @service.imported_unsuccessfully %> visitors could not be imported.</strong>
     </div>
   <% end %>
 <% end %>
